@@ -1,4 +1,21 @@
-local Kavo = {}
+--[[
+	 ____  _                 _      _ _     
+	|  _ \| |               | |    (_) |    
+	| |_) | | _____  ___   _| |     _| |__  
+	|  _ <| |/ _ \ \/ / | | | |    | | '_ \ 
+	| |_) | | (_) >  <| |_| | |____| | |_) |
+	|____/|_|\___/_/\_\\__, |______|_|_.__/ 
+	                    __/ |               
+	                   |___/                
+
+	Copyright (c) The Official Dev
+	Copyright (c) BloxyHub Development & Contributors
+	Copyright (c) xheptcofficial
+
+	Updated Clone of Kavo UI, since it has not been updated in a while.
+]]--
+
+local BloxyLib = {}
 
 local tween = game:GetService("TweenService")
 local tweeninfo = TweenInfo.new
@@ -7,7 +24,7 @@ local run = game:GetService("RunService")
 
 local Utility = {}
 local Objects = {}
-function Kavo:DraggingEnabled(frame, parent)
+function BloxyLib:DraggingEnabled(frame, parent)
         
     parent = parent or frame
     
@@ -126,7 +143,7 @@ local SettingsT = {
 
 }
 
-local Name = "KavoConfig.JSON"
+local Name = "BloxyLibConfig.JSON"
 
 pcall(function()
 
@@ -139,7 +156,7 @@ end)
 
 local LibName = tostring(math.random(1, 100))..tostring(math.random(1,50))..tostring(math.random(1, 100))
 
-function Kavo:ToggleUI()
+function BloxyLib:ToggleUI()
     if game.CoreGui[LibName].Enabled then
         game.CoreGui[LibName].Enabled = false
     else
@@ -147,7 +164,7 @@ function Kavo:ToggleUI()
     end
 end
 
-function Kavo.CreateLib(kavName, themeList)
+function BloxyLib.CreateLib(kavName, themeList)
     if not themeList then
         themeList = themes
     end
@@ -186,7 +203,7 @@ function Kavo.CreateLib(kavName, themeList)
     themeList = themeList or {}
     local selectedTab 
     kavName = kavName or "Library"
-    table.insert(Kavo, kavName)
+    table.insert(BloxyLib, kavName)
     for i,v in pairs(game.CoreGui:GetChildren()) do
         if v:IsA("ScreenGui") and v.Name == kavName then
             v:Destroy()
@@ -211,7 +228,7 @@ function Kavo.CreateLib(kavName, themeList)
 
     local blurFrame = Instance.new("Frame")
 
-    Kavo:DraggingEnabled(MainHeader, Main)
+    BloxyLib:DraggingEnabled(MainHeader, Main)
 
     blurFrame.Name = "blurFrame"
     blurFrame.Parent = pages
@@ -352,7 +369,7 @@ function Kavo.CreateLib(kavName, themeList)
         end
     end)()
 
-    function Kavo:ChangeColor(prope,color)
+    function BloxyLib:ChangeColor(prope,color)
         if prope == "Background" then
             themeList.Background = color
         elseif prope == "SchemeColor" then
@@ -2642,4 +2659,4 @@ function Kavo.CreateLib(kavName, themeList)
     end  
     return Tabs
 end
-return Kavo
+return BloxyLib
