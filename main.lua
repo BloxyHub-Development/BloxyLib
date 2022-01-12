@@ -12,7 +12,7 @@
 	Copyright (c) BloxyHub Development & Contributors
 	Copyright (c) xheptcofficial
 
-	Updated Clone of Kavo UI, since it has not been updated in a while.
+	Based on Kavo UI by xheptcofficial
 ]]--
 
 local BloxyLib = {}
