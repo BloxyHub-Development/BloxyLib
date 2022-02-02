@@ -2,10 +2,7 @@
 BloxyLib is an updated clone of Kavo UI.
 
 ## Copyright
-Copyright (c) The Official Dev
-Copyright (c) Rafe Daniels
-Copyright (c) BloxyHub Development & Contributors
-Copyright (c) xheptcofficial
+Copyright (c) The Official Dev, xheptcofficial, Rafe Daniels, BloxyHub Development & Contributors
 
 ## Disclaimer
 Use at your own risk.
